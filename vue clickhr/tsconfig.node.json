@@ -4,14 +4,16 @@
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
-    "skipLibCheck": true,
+
+    /* Project reference requirements */
+    "composite": true,
+    "noEmit": false,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "skipLibCheck": true,
 
     /* Linting */
     "strict": true,
