@@ -2,10 +2,12 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "composite": true,
-    "noEmit": false,
-    "declaration": true,
-    "declarationDir": "./types",
-    
+    "noEmit": false,             // You are allowing output in general
+    "declaration": true,         // You want to generate .d.ts files
+    "emitDeclarationOnly": false,  // <--- ADD THIS LINE: Ensure JS files are also emitted
+    "declarationDir": "./types"
+    // Add any other specific overrides you need from your Vue setup
+    // For example, ensure 'outDir' or 'rootDir' are set if needed by the extended config or your build
   },
   "include": [
     "src/**/*.ts",
